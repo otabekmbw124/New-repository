@@ -1,0 +1,70 @@
+.main
+	position: relative
+	padding-top: 65px
+	padding-bottom: 60px
+	background: #373737 url(../img/bckg.png) center no-repeat
+	background-size: cover
+	color: #fff
+	z-index: 1
+	/* Затемнение фона*/
+	&::before
+		content: ''
+		/*Делаем елемент блочным*/
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.6)
+		z-index: 0
+		/*Оформление главной картинки*/
+	&-img
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			z-index: -1
+			width: 390px
+			height: 390px
+			left: 50%
+			margin-left: -196px
+			border: 1px solid #ffff 
+			border-radius: 50%
+		/*Заголовок*/
+	&-text
+		&-title
+			font-size: 41px
+			font-weight: 700
+		&-subtitle
+			margin-bottom: 27px
+			font-size: 28px
+			font-weight: 300
+		&-form
+			padding: 30px 27px
+			background-color: rgba(255, 255, 255, 0.2)
+	.form
+			display: flex
+			margin-bottom: 12px
+			&-title
+				padding-right: 87px
+				font-size: 20px
+				font-weight: 300
+				line-height: 30px
+				margin-bottom: 20px
+				&-important
+					font-weight: 700
+					text-transform: uppercase 
+			&-input
+				width: 311px
+				height: 56px
+				font-size: 14px
+				margin-right: 10px
+				padding: 20px
+				border-right: 4px
+				border: none
+				flex-basis: 50%
+			&-small
+				font-size: 14px
+				font-weight: 300	
+				
